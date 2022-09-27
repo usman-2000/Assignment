@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step-3</title>
+
+    <style>
+        * {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: large;
+        }
+
+        .header {
+            background-color: rgb(175, 173, 173);
+            height: 50px;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        .whole {
+            width: 50vw;
+            margin: auto;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .whole{
+                width: 90vw;
+            }
+        }
+        .steps{
+            font-weight: 700;
+            font-size: 20px;
+            /* height: inherit; */
+            width:inherit;
+            text-align: center;
+            height: 100%;
+            
+        }
+
+        #step1,#step2{
+            background-color: rgb(95, 218, 150);
+        }
+        #step3{
+            background-color: rgb(161, 161, 241);
+        }
+
+        legend,label,select,option,input{
+            margin-top: 10px;
+            font-weight: 700;
+        }
+        img{
+            width: 150px;
+            height: 40px;
+            margin-top: 30px;
+        }
+        img:hover{
+            height: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="whole">
+        <div class="header">
+            <div class="steps" id="step1">Step 1:Account</div>
+            <div class="steps" id="step2">Step 2:Personal details</div>
+            <div class="steps" id="step3">Step 3:Your Review</div>
+        </div>
+
+        <div class="cont">
+            <form action="">
+                <fieldset>
+                    <legend>Your Review</legend>
+
+                    <label for="hearing">How did You hear about us?</label>
+                    <select name="Hearing" id="option_selector">
+                        <option value="">Select</option>
+                        <option value="Friend">Friend</option>
+                        <option value="Social Media">Social Media</option>
+                        <option value="Family">Family</option>
+                        <option value="NewsPaper">Newspaper</option>
+                    </select>
+
+                    <br>
+                    <label for="radio">Would you visit again?</label>
+                    <input type="radio" name="Yes" id="">Yes
+                    <input type="radio" name="Yes" id="">No
+                    <input type="radio" name="Yes" id="">Maybe
+
+                    <br>
+
+                    <label for="comments">Comments:</label><br>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Enter your comments here..."></textarea>
+
+                    <br>
+
+                    <label for="Docs">Documents:</label>
+                    <input type="file" name="" id="file_choosen" placeholder="Choose file" onclick="submit()">
+                    <br>
+
+                    <input type="checkbox" id="checkbox">Sign me up for email updates
+
+                    <br>
+
+                    <a href="second.html" class="btn"><img src="back.png" alt=""></a>
+                    <a href="#" class="btn" onclick="submit()"><img src="submit.png" alt=""></a>
+                </fieldset>
+
+
+
+
+            </form>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    function submit(){
+        var file_choosen = document.getElementById("file_choosen");
+        if(file_choosen.checked = false){
+            alert("please select the file first");
+        }
+        else{
+            alert("The form is submitted");
+
+        }
+    }
+</script>
+
+</html>
